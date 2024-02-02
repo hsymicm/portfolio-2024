@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import { cn } from "@/libs/utils";
+import { cn } from "@/libs/cn";
 
 import Link from "next/link";
 

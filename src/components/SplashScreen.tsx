@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState, useEffect, useRef } from "react";
-import { cn } from "@/libs/utils";
+import { cn } from "@/libs/cn";
 import gsap from "gsap";
 
 const SplashScreen: FC = () => {
