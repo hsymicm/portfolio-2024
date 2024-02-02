@@ -1,0 +1,27 @@
+import { FC, ReactNode } from "react";
+import { cn } from "@/libs/utils";
+
+import Link from "next/link";
+
+interface NavMenuProps {
+  children: ReactNode;
+  currentPath: string;
+  path?: string;
+}
+
+const NavMenu: FC<NavMenuProps> = ({ children, currentPath, path = "" }) => {
+  return (
+    <Link
+      href={path}
+      className={cn(
+        currentPath === path ? "bg-primary" : "bg-primaryBackground",
+        "hover:bg-primary-light active:bg-primary-dark",
+        "flex items-center h-full px-4 font-light rounded-lg transition duration-150 ease-in-out cursor-pointer"
+      )}
+    >
+      {children}
+    </Link>
+  );
+};
+
+export default NavMenu;
