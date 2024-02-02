@@ -1,7 +1,7 @@
 "use client"
 
 import { FC, ReactNode } from "react";
-import { cn } from "@/libs/utils";
+import { cn } from "@/libs/cn";
 
 interface ForegroundWrapperProps {
   children: ReactNode;
