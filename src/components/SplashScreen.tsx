@@ -10,8 +10,8 @@ const SplashScreen: FC = () => {
   const openDuration = 3
 
   useEffect(() => {
-    const body = document.querySelector("body")
-    body.classList.add("loading")
+    // const body = document.querySelector("body")
+    // body.classList.add("loading")
 
     const ctx = gsap.context(() => {
       gsap.to("#bar", {
@@ -54,7 +54,7 @@ const SplashScreen: FC = () => {
         repeat: 0,
         onComplete: () => {
           setShow(false)
-          body.classList.remove("loading")
+          // body.classList.remove("loading")
         },
       })
     })
