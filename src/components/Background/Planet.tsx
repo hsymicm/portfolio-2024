@@ -4,6 +4,7 @@ import { FC, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
+import { cn } from "@/libs/cn";
 
 gsap.registerPlugin(CustomEase);
 
@@ -12,6 +13,7 @@ interface PlanetProps {
   duration: number;
   angle?: number;
   multiplier?: number;
+  className?: any;
 }
 
 const Planet: FC<PlanetProps> = ({
@@ -19,6 +21,7 @@ const Planet: FC<PlanetProps> = ({
   duration,
   angle = 0,
   multiplier = 0.75,
+  className,
 }) => {
   const gradient: string =
     "conic-gradient(from 205deg at 50% 50%, rgba(255, 255, 255, 0.43) 4.392405599355698deg, rgba(255, 255, 255, 0.19) 26.433003544807434deg, #FFF 58.7471204996109deg, rgba(255, 255, 255, 0.29) 81.01170837879181deg, #FFF 122.40000128746033deg, rgba(255, 255, 255, 0.17) 160.19999742507935deg, #FFF 198.00000429153442deg, rgba(255, 255, 255, 0.48) 225deg, rgba(255, 255, 255, 0.55) 254.14423942565918deg, #FFF 274.6719789505005deg, rgba(255, 255, 255, 0.35) 291.8365502357483deg, #FFF 313.20000171661377deg, rgba(255, 255, 255, 0.43) 338.86640310287476deg)";
@@ -75,7 +78,7 @@ const Planet: FC<PlanetProps> = ({
         aspectRatio: `${semiMajorAxis}/${semiMinorAxis}`,
         mixBlendMode: "screen",
       }}
-      className="absolute rounded-[50%] left-0 right-0 top-0 bottom-0 m-auto"
+      className={cn("absolute rounded-[50%] left-0 right-0 top-0 bottom-0 m-auto", className)}
     >
       <div
         ref={planet}

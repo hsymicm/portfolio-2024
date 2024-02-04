@@ -13,7 +13,7 @@ import TailwindCSS from "@/assets/tailwindcss.svg"
 
 const TechStackGrid: FC = () => {
   const classes = {
-    base: "flex flex-col w-full h-full bg-primaryBackground rounded-2xl border-[1px] border-white/20",
+    base: "flex flex-col w-full h-full bg-primary/50 rounded-2xl border-[1px] border-white/20 backdrop-blur-lg backdrop-brightness-75",
     variant: {
       lg: "justify-between p-6 gap-2",
       md: "justify-between p-4 gap-2",

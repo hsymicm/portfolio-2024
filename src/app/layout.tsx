@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import NoiseOverlay from "@/components/Background/NoiseOverlay";
 import Navigation from "@/components/Navigation";
 import SplashScreen from "@/components/SplashScreen";
+import Footer from "@/components/Footer";
 
 import "@/app/globals.css";
 import "@/app/fonts.css";
@@ -22,6 +23,7 @@ export default function RootLayout({
         <SplashScreen />
         <Navigation />
         {children}
+        <Footer />
         {/* <Animate /> */}
         <NoiseOverlay />
       </body>

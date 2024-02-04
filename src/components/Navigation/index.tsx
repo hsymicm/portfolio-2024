@@ -15,12 +15,12 @@ const Navigation: FC = () => {
     <nav className="fixed w-full p-6 flex justify-between z-50">
       <section className="flex gap-6">
         <Image
-          className="w-16 aspect-square rounded-2xl bg-primaryBackground object-cover object-center"
+          className="w-16 aspect-square rounded-2xl bg-primary/50 backdrop-blur-lg backdrop-brightness-75 object-cover object-center"
           src={Profile}
           alt=""
           width={64}
         />
-        <section className="px-4 py-2 border-[1px] border-white/20 bg-primaryBackground rounded-2xl">
+        <section className="px-4 py-2 border-[1px] border-white/20 bg-primary/50 backdrop-blur-lg backdrop-brightness-75 rounded-2xl">
           <p className="text-white text-xl font-serif">Fadil Hisyam</p>
           <div className="flex items-center gap-[6px] text-xs font-thin text-white/80">
             <p>Front End Developer</p>
@@ -30,7 +30,7 @@ const Navigation: FC = () => {
         </section>
       </section>
       <section className="flex gap-6">
-        <ul className="flex items-center text-white p-2 border-[1px] border-white/20 bg-primaryBackground rounded-2xl">
+        <ul className="flex items-center text-white p-2 border-[1px] border-white/20 bg-primary/50 backdrop-blur-lg backdrop-brightness-75 rounded-2xl">
           <NavMenu path="/" currentPath={pathname}>
             Home
           </NavMenu>

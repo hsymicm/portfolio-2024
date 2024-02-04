@@ -4,7 +4,7 @@ import TechStackGrid from "@/components/TechStack/TechStackGrid";
 
 const TechStack: FC = () => {
   return (
-    <main className="relative w-full px-[10%] py-32 flex items-center justify-center gap-16">
+    <section className="relative w-full px-[10%] py-32 flex items-center justify-center gap-16">
       <section className="flex flex-col mb-2 w-fit max-w-fit min-w-min">
         <h2 className="text-6xl balance leading-[108%] text-white font-serif">
           What I<br/>Mainly Use
@@ -19,7 +19,7 @@ const TechStack: FC = () => {
         <TechStackGrid />
       </section>
       <TechStackBackground />
-    </main>
+    </section>
   );
 };
 
