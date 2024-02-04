@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="root">
+      <body id="root" className="relative w-full h-full bg-black overflow-x-hidden">
         <SplashScreen />
         <Navigation />
         {children}
