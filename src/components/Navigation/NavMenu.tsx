@@ -14,8 +14,8 @@ const NavMenu: FC<NavMenuProps> = ({ children, currentPath, path = "" }) => {
     <Link
       href={path}
       className={cn(
-        currentPath === path ? "bg-white text-black font-normal" : "bg-transparent font-light text-white",
-        "hover:bg-primary-light active:bg-primary-dark",
+        currentPath === path ? "bg-white text-black" : "bg-transparent text-white",
+        "hover:bg-zinc-100 active:bg-zinc-300 hover:text-black",
         "flex items-center h-full px-4 rounded-lg transition duration-150 ease-in-out cursor-pointer"
       )}
     >
