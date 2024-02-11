@@ -15,7 +15,7 @@ const Work: FC = () => {
   }
 
   return (
-    <section className="relative px-[10%] py-36 flex flex-col gap-12 justify-center items-center">
+    <section id="work" className="relative px-[10%] py-36 flex flex-col gap-12 justify-center items-center">
       <section>
         <h2 className="text-6xl balance leading-[108%] text-white font-serif text-center">
           Previous Work
