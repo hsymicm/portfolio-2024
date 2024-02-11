@@ -7,11 +7,13 @@ interface NavMenuProps {
   children: ReactNode;
   currentPath: string;
   path?: string;
+  scroll?: boolean;
 }
 
-const NavMenu: FC<NavMenuProps> = ({ children, currentPath, path = "" }) => {
+const NavMenu: FC<NavMenuProps> = ({ children, currentPath, scroll = true, path = "" }) => {
   return (
     <Link
+      scroll={path === currentPath ? false : scroll}
       href={path}
       className={cn(
         currentPath === path ? "bg-white text-black" : "bg-transparent text-white",
