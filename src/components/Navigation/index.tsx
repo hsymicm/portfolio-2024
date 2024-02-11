@@ -35,9 +35,9 @@ const Navigation: FC = () => {
             Home
           </NavMenu>
           <hr className="mx-2 border-[1px] border-white/20 h-8" />
-          <NavMenu currentPath={pathname}>Stack</NavMenu>
+          <NavMenu path="#stack" currentPath={pathname} scroll>Stack</NavMenu>
           <hr className="mx-2 border-[1px] border-white/20 h-8" />
-          <NavMenu currentPath={pathname}>Work</NavMenu>
+          <NavMenu path="#work" currentPath={pathname} scroll>Work</NavMenu>
           <hr className="mx-2 border-[1px] border-white/20 h-8" />
           <NavMenu currentPath={pathname}>About</NavMenu>
         </ul>
