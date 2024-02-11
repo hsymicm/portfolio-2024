@@ -18,13 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html style={{scrollBehavior: "smooth"}} lang="en">
       <body id="root" className="relative w-full h-full bg-black overflow-x-hidden">
         <SplashScreen />
         <Navigation />
         {children}
         <Footer />
-        {/* <Animate /> */}
         <NoiseOverlay />
       </body>
     </html>
