@@ -9,8 +9,8 @@ const TechStackBackground: FC = () => {
   return (
     <>
       <ForegroundWrapper>
-        <ShinyStar className="absolute top-0 -right-8" size="lg" />
-        <ShinyStar className="absolute -bottom-32 left-8" size="md" />
+        <ShinyStar className="absolute top-16 -right-8" size="lg" />
+        <ShinyStar className="absolute -bottom-16 left-8" size="md" />
         <div className="absolute -bottom-[240px] -right-[240px] w-[420px] bg-white/50 aspect-square rounded-full blur-[300px]" />
       </ForegroundWrapper>
       <BackgroundWrapper>
