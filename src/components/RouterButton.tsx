@@ -1,15 +1,15 @@
+"use client"
+
 import { FC, ReactNode } from "react";
-import Link from "next/link";
 import { cn } from "@/libs/cn";
+import { useRouter } from "next/navigation";
 
 interface ButtonProps {
   children: ReactNode;
   variant?: "primary" | "secondary" | "outline";
   size?: "small" | "normal"; 
   includeIcon?: boolean;
-  onClick?: any;
-  href?: string;
-  newTab?: boolean;
+  path: string;
   className?: any;
 }
 
@@ -19,13 +19,11 @@ interface Classes {
   size: Record<"small" | "normal", string>;
 }
 
-const Button: FC<ButtonProps> = ({
+const RouterButton: FC<ButtonProps> = ({
   children,
   includeIcon,
-  onClick,
+  path,
   className,
-  href = "",
-  newTab = false,
   variant = "primary",
   size = "normal",
 }) => {
@@ -42,12 +40,11 @@ const Button: FC<ButtonProps> = ({
     },
   };
 
+  const router = useRouter()
+
   return (
-    <Link
-      href={href}
-      // onClick={onClick ? onClick : href === "" ? (e) => e.preventDefault() : null }
-      rel={newTab ? "noopener noreferrer" : ""}
-      target={newTab ? "_blank" : ""}
+    <button
+      onClick={() => router.push(path)}
       className={cn(
         classes.base,
         classes.variant[variant],
@@ -56,8 +53,8 @@ const Button: FC<ButtonProps> = ({
       )}
     >
       {children}
-    </Link>
+    </button>
   );
 };
 
-export default Button;
+export default RouterButton;

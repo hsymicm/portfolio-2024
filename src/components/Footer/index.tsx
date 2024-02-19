@@ -4,11 +4,11 @@ import FooterBackground from "./FooterBackground";
 
 const Footer: FC = () => {
   return (
-    <footer className="relative px-[10%] py-16 flex flex-col items-center gap-12">
-      <h2 className="max-w-2xl text-center text-white text-5xl leading-[120%] font-serif">
+    <footer className="relative px-6 md:px-[6%] xl:px-[10%] py-6 md:py-12 xl:py-16 flex flex-col items-center gap-6 md:gap-12">
+      <h2 className="max-w-2xl text-center text-white text-4xl xl:text-5xl leading-[120%] font-serif">
         {"Let's Create Stellar Experience Together!"}
       </h2>
-      <section className="flex gap-8">
+      <section className="flex my-4 md:my-0 gap-4 md:gap-8 flex-wrap justify-center">
         <Button className="flex gap-2 items-center" includeIcon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +25,8 @@ const Footer: FC = () => {
           className="flex gap-2 items-center"
           variant="outline"
           includeIcon
+          href="https://instagram.com/hsym_icm"
+          newTab
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +58,8 @@ const Footer: FC = () => {
           className="flex gap-2 items-center"
           variant="outline"
           includeIcon
+          href="https://www.linkedin.com/in/fadil-hisyam"
+          newTab
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +79,8 @@ const Footer: FC = () => {
           className="flex gap-2 items-center"
           variant="outline"
           includeIcon
+          href="https://www.github.com/hsymicm"
+          newTab
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -104,9 +110,9 @@ const Footer: FC = () => {
         </Button>
       </section>
       <hr className="w-full h-[1px] bg-white"/>
-      <section className="w-full flex gap-4 justify-between font-light text-white/80">
+      <section className="w-full flex gap-2 justify-between text-sm md:text-md font-light text-white/80">
         <p>Made with passion by Fadil Hisyam</p>
-        <p>Copyright &copy; 2024 Fadil Hisyam</p>
+        <p className="text-right">Copyright &copy; 2024 Fadil Hisyam</p>
       </section>
       <FooterBackground />
     </footer>

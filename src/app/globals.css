@@ -24,4 +24,20 @@ body::before {
   .balance {
     text-wrap: balance;
   }
+
+  .perspective {
+    perspective: 400px;
+  }
+
+  .perspective-0 {
+    perspective: none;
+  }
+
+  .mask {
+    -webkit-mask: linear-gradient(0deg, transparent, black 50%);
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+  }
 }

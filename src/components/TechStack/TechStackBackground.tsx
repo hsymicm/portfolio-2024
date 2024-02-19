@@ -1,7 +1,6 @@
 import { FC } from "react";
 import ForegroundWrapper from "@/components/Wrapper/ForegroundWrapper";
 import ShinyStar from "@/components/Background/ShinyStar";
-import ShinyOrbit from "@/components/Background/ShinyOrbit";
 import BackgroundWrapper from "@/components//Wrapper/BackgroundWrapper";
 import Planet from "@/components/Background/Planet";
 
@@ -9,9 +8,8 @@ const TechStackBackground: FC = () => {
   return (
     <>
       <ForegroundWrapper>
-        <ShinyStar className="absolute top-16 -right-8" size="lg" />
-        <ShinyStar className="absolute -bottom-16 left-8" size="md" />
-        <div className="absolute -bottom-[240px] -right-[240px] w-[420px] bg-white/50 aspect-square rounded-full blur-[300px]" />
+        <ShinyStar className="absolute -top-16 -right-12 md:-right-8" size="lg" />
+        <ShinyStar className="absolute -bottom-8 -left-2 md:left-8" size="md" />
       </ForegroundWrapper>
       <BackgroundWrapper>
         <div className="absolute -top-1 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-20" />

@@ -44,11 +44,11 @@ const HeaderBackground: FC = () => {
   return (
     <>
       <ForegroundWrapper>
-        <ShinyStar className="absolute bottom-48 left-6" size="sm"/>
-        <ShinyStar className="absolute top-32 right-12" size="md"/>
-        <ShinyStar className="absolute -bottom-16 left-24" size="md"/>
-        <div className="absolute -bottom-[180px] -left-[120px] w-[420px] bg-white/50 aspect-square rounded-full blur-[300px]" />
-        <div className="absolute -top-[180px] -right-[240px] w-[420px] bg-white/60 aspect-square rounded-full blur-[300px]" />
+        <ShinyStar className="absolute bottom-48 -left-[4%] md:left-6" size="sm"/>
+        <ShinyStar className="absolute -top-8 -right-[4%] md:right-12" size="md"/>
+        <ShinyStar className="absolute -bottom-8 left-[6%] md:left-24" size="md"/>
+        <div className="absolute -bottom-[280px] md:-bottom-[180px] -left-[240px] md:-left-[120px] w-[420px] bg-white/50 aspect-square rounded-full blur-[300px]" />
+        <div className="absolute -top-[280px] md:-top-[180px] -right-[320px] md:-right-[240px] w-[420px] bg-white/60 aspect-square rounded-full blur-[300px]" />
         <div className="absolute -top-1 left-0 w-full h-32 bg-gradient-to-b from-black/50 from-20% to-transparent -z-20" />
         <div className="absolute -bottom-1 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent -z-20" />
       </ForegroundWrapper>
@@ -63,7 +63,7 @@ const HeaderBackground: FC = () => {
                 background: `${gradient}, #000`,
                 zIndex: totalOfOrbit - i,
               }}
-              className="absolute aspect-square rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="shadow-2xl shadow-white/5 absolute aspect-square rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
               <div
                 style={{

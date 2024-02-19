@@ -63,7 +63,7 @@ const SplashScreen: FC = () => {
         "z-[9999]"
       )}
     >
-      <div className="flex text-white text-5xl font-serif z-10 pb-[6px] mb-4 overflow-hidden">
+      <div className="flex text-white text-3xl md:text-5xl font-serif z-10 pb-[6px] mb-4 overflow-hidden">
         <span id="stagger-text">F</span>
         <span id="stagger-text">a</span>
         <span id="stagger-text">d</span>
@@ -79,32 +79,32 @@ const SplashScreen: FC = () => {
       </div>
       <div id="splash-screen-glow" className="absolute left-1/2 -translate-x-1/2 -bottom-[380px] w-[540px] bg-white/40 aspect-square rounded-full blur-[300px] z-10" />
       <div className="absolute top-0 left-0 flex  w-screen h-screen">
-        <div id="bar" className="w-1/5 bg-black border-2 border-black"></div>
-        <div id="bar" className="w-1/5 bg-black border-2 border-black"></div>
-        <div id="bar" className="w-1/5 bg-black border-2 border-black"></div>
-        <div id="bar" className="w-1/5 bg-black border-2 border-black"></div>
-        <div id="bar" className="w-1/5 bg-black border-2 border-black"></div>
+        <div id="bar" className="w-1/3 md:w-1/5  bg-black border-2 border-black"></div>
+        <div id="bar" className="w-1/3 md:w-1/5  bg-black border-2 border-black"></div>
+        <div id="bar" className="w-1/3 md:w-1/5  bg-black border-2 border-black"></div>
+        <div id="bar" className="hidden md:block w-1/5 bg-black border-2 border-black"></div>
+        <div id="bar" className="hidden md:block w-1/5 bg-black border-2 border-black"></div>
       </div>
       <div className="absolute top-0 left-0 flex w-screen h-screen -z-10">
         <div
           id="bar-child"
-          className=" w-1/5 bg-gradient-to-b from-transparent to-40% to-white"
+          className="w-1/3 md:w-1/5 bg-gradient-to-b from-transparent to-40% to-white"
         ></div>
         <div
           id="bar-child"
-          className=" w-1/5 bg-gradient-to-b from-transparent to-40% to-white"
+          className="w-1/3 md:w-1/5 bg-gradient-to-b from-transparent to-40% to-white"
         ></div>
         <div
           id="bar-child"
-          className=" w-1/5 bg-gradient-to-b from-transparent to-40% to-white "
+          className="w-1/3 md:w-1/5 bg-gradient-to-b from-transparent to-40% to-white "
         ></div>
         <div
           id="bar-child"
-          className=" w-1/5 bg-gradient-to-b from-transparent to-40% to-white "
+          className="hidden md:block w-1/5 bg-gradient-to-b from-transparent to-40% to-white "
         ></div>
         <div
           id="bar-child"
-          className=" w-1/5 bg-gradient-to-b from-transparent to-40% to-white "
+          className="hidden md:block w-1/5 bg-gradient-to-b from-transparent to-40% to-white "
         ></div>
       </div>
     </div>

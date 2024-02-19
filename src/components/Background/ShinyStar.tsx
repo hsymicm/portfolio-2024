@@ -1,49 +1,61 @@
-"use client";
+"use client"
 
-import { FC, useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { FC, useEffect, useRef, useState } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from "@gsap/react"
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 interface ShinyStarProps {
-  size?: "sm" | "md" | "lg";
-  className?: any;
+  size?: "sm" | "md" | "lg"
+  className?: any
 }
 
 const ShinyStar: FC<ShinyStarProps> = ({ className, size = "md" }) => {
-  const [randomRotation, setRandomRotation] = useState<number>(49);
+  const [randomRotation, setRandomRotation] = useState<number>(49)
 
-  const starContainerRef = useRef<any>();
-  const starRef = useRef<any>();
+  const starContainerRef = useRef<any>(false)
+  const starRef = useRef<any>(false)
 
   useGSAP(() => {
-    setRandomRotation(Math.floor(Math.random() * 361) - 180);
+    const randomNumber = Math.random()
+    setRandomRotation(Math.floor(randomNumber * 361) - 180)
 
-    gsap.to(starContainerRef.current, {
-      yPercent: size === "lg" ? -60 : size === "sm" ? -30 : -50,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: starRef.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
-  });
+    // gsap.to(starContainerRef.current, {
+    //   yPercent: size === "lg" ? -60 : size === "sm" ? -30 : -50,
+    //   ease: "power2.inOut",
+    //   scrollTrigger: {
+    //     trigger: starRef.current,
+    //     start: "top bottom",
+    //     end: "bottom top",
+    //     scrub: true,
+    //   },
+    // })
 
-  // useEffect(() => {
-  //   setRandomRotation(Math.floor(Math.random() * 361) - 180);
-  // }, [])
+    // gsap.to(starRef.current, {
+    //   opacity: 100,
+    //   ease: "linear",
+    //   duration: 1,
+    //   repeat: 0,
+    // })
+
+    gsap.to(
+      starRef.current,
+      {
+        scale: 1.1,
+        y: (1 + randomNumber/2) * (size === "lg" ? 30 : size === "sm" ? 10 : 20),
+        duration: (1 + randomNumber) * (size === "lg" ? 8 : size === "sm" ? 2 : 5),
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+      }
+    )
+  })
 
   return (
-    <div
-      className={`${className} shiny-star`}
-      id={`shiny-star-${size}`}
-      ref={starContainerRef}
-    >
-      <div ref={starRef} className="shiny-star-container">
+    <div className={`${className}`} ref={starRef}>
+      <div ref={starContainerRef}>
         {size === "lg" ? (
           <ShinyStarLarge rotation={randomRotation} />
         ) : size === "sm" ? (
@@ -53,11 +65,11 @@ const ShinyStar: FC<ShinyStarProps> = ({ className, size = "md" }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 interface ShinyStarRotationProp {
-  rotation: number;
+  rotation: number
 }
 
 const ShinyStarLarge: FC<ShinyStarRotationProp> = ({ rotation }) => {
@@ -118,8 +130,8 @@ const ShinyStarLarge: FC<ShinyStarRotationProp> = ({ rotation }) => {
         </radialGradient>
       </defs>
     </svg>
-  );
-};
+  )
+}
 
 const ShinyStarMedium: FC<ShinyStarRotationProp> = ({ rotation }) => {
   return (
@@ -179,8 +191,8 @@ const ShinyStarMedium: FC<ShinyStarRotationProp> = ({ rotation }) => {
         </radialGradient>
       </defs>
     </svg>
-  );
-};
+  )
+}
 
 const ShinyStarSmall: FC<ShinyStarRotationProp> = ({ rotation }) => {
   return (
@@ -240,7 +252,7 @@ const ShinyStarSmall: FC<ShinyStarRotationProp> = ({ rotation }) => {
         </radialGradient>
       </defs>
     </svg>
-  );
-};
+  )
+}
 
-export default ShinyStar;
+export default ShinyStar
