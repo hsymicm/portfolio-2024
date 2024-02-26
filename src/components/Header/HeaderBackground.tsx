@@ -62,8 +62,9 @@ const HeaderBackground: FC = () => {
                 width: `${120 + 200 * i}px`,
                 background: `${gradient}, #000`,
                 zIndex: totalOfOrbit - i,
+                mixBlendMode: "screen",
               }}
-              className="shadow-2xl shadow-white/5 absolute aspect-square rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className=" shadow-2xl shadow-white/5 absolute aspect-square rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
               <div
                 style={{
