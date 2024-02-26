@@ -7,14 +7,23 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      serif: ["Playfair Display", "serif"],
+      sans: ["Roboto", "sans-serif"],
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: {
+          light: "#383838",
+          DEFAULT: "#282828",
+          dark: "#202020",
+        },
+        primaryBackground: "#111111",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 export default config;
